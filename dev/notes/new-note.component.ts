@@ -1,4 +1,4 @@
-import {Component} from "angular2/core";
+import {Component} from "@angular/core";
 
 @Component({
     selector: 'new-note',
@@ -6,8 +6,8 @@ import {Component} from "angular2/core";
         <h1>Add note</h1>
         <form action="#">
             <div>
-                <label for="text">Text:</label>
-                <input type="text" id="text">
+                <label for="text">Text:</label><br>
+                <textarea id="text"></textarea>
             </div>
             <button type="submit">Add</button>
         </form>
