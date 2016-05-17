@@ -49,4 +49,4 @@ gulp.task('watch', function () {
     gulp.watch(sassDir + 'sass/**/*.sass', ['build-css']);
 });
 
-gulp.task('default', ['watch', 'build-ts', 'build-css']);
+gulp.task('default', ['watch', 'copy-files', 'build-ts', 'build-css']);
