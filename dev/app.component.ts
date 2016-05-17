@@ -1,13 +1,10 @@
 import {Component} from '@angular/core';
 import { NoteListComponent } from './notes/note-list.component';
-import {NewNoteComponent} from "./notes/new-note.component";
+import {NewNoteComponent} from './notes/new-note.component';
 
 @Component({
     selector: 'diary',
-    template: `
-        <new-note></new-note>
-        <note-list></note-list>
-    `,
+    templateUrl: 'templates/app.tpl.html',
     directives: [NewNoteComponent, NoteListComponent]
 })
 export class AppComponent {
