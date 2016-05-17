@@ -1,11 +1,12 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
+import { NoteListComponent } from './notes/note-list.component';
 
 @Component({
     selector: 'my-app',
     template: `
-        <h1>Angular 2 Boilerplate</h1>
-        <p>Hello World!</p>
+        <note-list></note-list>
     `,
+    directives: [NoteListComponent]
 })
 export class AppComponent {
 
