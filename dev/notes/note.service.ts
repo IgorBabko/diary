@@ -1,8 +1,16 @@
 import {Injectable} from '@angular/core'
+import {Note} from "./note";
 
 @Injectable()
 export class NoteService {
+    
+    private _notes:Note[] = [
+        new Note(new Date(), 'first item'),
+        new Note(new Date(), 'second item'),
+        new Note(new Date(), 'third item')
+    ];
+
     public getNotes() {
-        return ['item1', 'item2', 'item3'];
+        return this._notes;
     }
 }
