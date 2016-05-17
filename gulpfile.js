@@ -1,4 +1,6 @@
 var gulp = require('gulp');
+var sass = require('gulp-sass');
+
 
 var assetsDev = 'assets/';
 var assetsProd = 'src/';
@@ -27,6 +29,7 @@ var tsProject = typescript.createProject('tsconfig.json');
 
 gulp.task('build-css', function () {
     return gulp.src(assetsDev + 'sass/*.sass')
+        .pipe(sass())
         .pipe(sourcemaps.init())
         .pipe(postcss([precss, autoprefixer, cssnano]))
         .pipe(sourcemaps.write())
