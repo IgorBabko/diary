@@ -3,9 +3,8 @@
     <title>Diary</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="node_modules/jquery/dist/jquery.min.css">
     <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.min.css">
-    <link rel="stylesheet" href="src/css/app.css">
+    <link rel="stylesheet" href="dist/css/app.css">
 
 
     <!-- 1. Load libraries -->
@@ -19,18 +18,19 @@
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
 
+
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
     <script>
         System.config({
             packages: {
-                app: {
+                '/': {
                     format: 'register',
                     defaultExtension: 'js'
                 }
             }
         });
-        System.import('app/boot').catch(function (err) {
+        System.import('dist/app/boot').catch(function (err) {
             console.error(err);
         });
     </script>
@@ -38,6 +38,6 @@
 </head>
 <body>
 
-<diary>Loading...</diary>
+<diary>loading...</diary>
 </body>
 </html>
