@@ -11,6 +11,7 @@ import {Component} from "@angular/core";
                 </div>
                 <button type="submit">Save</button>
             </form>
+            <button>Delete</button>
             <button>Edit</button>
         </div>
     `
