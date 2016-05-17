@@ -1,4 +1,4 @@
-# Diary
+# Organizer
 
 ## Description
 This app is meant to help people organize their daily activity
