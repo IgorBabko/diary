@@ -1,13 +1,10 @@
-<div class="col s12 m6">
-    <div class="card Note">
-        <div class="card-content white-text">
-            <span class="card-title">Card Title</span>
-            <p>I am a very simple card. I am good at containing small bits of information.
-                I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action Note__action">
-            <a href="#deleteModal" class="btn-floating red Note__button delete-modal-trigger"><i class="material-icons">delete</i></a>
-            <a href="#editModal" class="btn-floating blue Note__button edit-modal-trigger"><i class="material-icons">edit</i></a>
-        </div>
+<div class="card Note">
+    <div class="card-content white-text">
+        <span class="card-title">{{ note._time | date:'ymd' }}</span>
+        <p>{{ note._text }}</p>
+    </div>
+    <div class="card-action Note__action">
+        <a href="#deleteModal" class="btn-floating red Note__button delete-modal-trigger"><i class="material-icons">delete</i></a>
+        <a href="#editModal" class="btn-floating blue Note__button edit-modal-trigger"><i class="material-icons">edit</i></a>
     </div>
 </div>

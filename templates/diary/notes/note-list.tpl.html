@@ -1,8 +1,3 @@
-<o-note></o-note>
-<o-note></o-note>
-<o-note></o-note>
-<o-note></o-note>
-<o-note></o-note>
-<o-note></o-note>
-<o-note></o-note>
-<o-note></o-note>
+<div class="col s12 m6" *ngFor="let note of _noteService.getNotes() | orderBy:['time']">
+    <o-note [note]="note"></o-note>
+</div>

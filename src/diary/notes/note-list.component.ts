@@ -5,7 +5,6 @@ import {NoteComponent} from './note.component';
 @Component({
     selector: 'o-note-list',
     templateUrl: 'templates/diary/notes/note-list.tpl.html',
-    providers: [NoteService],
     directives: [NoteComponent]
 })
 export class NoteListComponent {

@@ -1,8 +1,17 @@
 <div class="row">
-    <form class="col s12" [ngFormModel]="addNoteForm">
+    <form class="col s12" [ngFormModel]="addNoteForm" (submit)="addNote()">
         <div class="input-field col s12">
-            <textarea id="textarea1" class="materialize-textarea"></textarea>
-            <label for="textarea1">Write new note here:</label>
+            <textarea id="text" 
+                      class="materialize-textarea"
+                      ngControl="text"
+                      #text="ngForm">
+            </textarea>
+            <label for="text">Write new note here:</label>
+            <button class="waves-effect waves-light btn green Button Button--add-note" 
+                    [disabled]="!addNoteForm.valid" 
+                    [class.disabled]="!addNoteForm.valid">
+                    <i class="material-icons left">add</i>add
+            </button>
         </div>
     </form>
 </div>

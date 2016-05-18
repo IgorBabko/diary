@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core'
-import {Note} from "./note.model";
+import {Note} from './note';
 
 @Injectable()
 export class NoteService {
@@ -12,5 +12,10 @@ export class NoteService {
 
     public getNotes() {
         return this._notes;
+    }
+
+    public push(note: Note) {
+        this._notes.push(note);
+        console.log(this._notes);
     }
 }
