@@ -15,7 +15,6 @@ export class NoteService {
     }
 
     public push(note: Note) {
-        this._notes.push(note);
-        console.log(this._notes);
+        this._notes.unshift(note);
     }
 }
