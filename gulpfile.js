@@ -26,12 +26,9 @@ var imagemin = require('gulp-imagemin');
 var tsProject = typescript.createProject('tsconfig.json');
 
 gulp.task('build-css', function () {
-    return gulp.src(sassDir + '**/*.sass')
+    return gulp.src(sassDir + 'app.sass')
         .pipe(sass())
-        .pipe(sourcemaps.init())
         .pipe(postcss([precss, autoprefixer, cssnano]))
-        .pipe(sourcemaps.write())
-        .pipe(ext_replace('.css'))
         .pipe(gulp.dest(cssDir));
 });
 

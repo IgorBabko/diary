@@ -4,7 +4,6 @@ import {NewNoteComponent} from './notes/new-note.component';
 import {NavbarComponent} from './shared/navbar.component';
 import {FooterComponent} from './shared/footer.component';
 
-
 @Component({
     selector: 'diary',
     templateUrl: 'templates/app.tpl.html',
