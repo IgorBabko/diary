@@ -34,10 +34,7 @@ gulp.task('build-css', function () {
 
 gulp.task('build-ts', function () {
     return gulp.src(srcDir + '**/*.ts')
-        .pipe(sourcemaps.init())
         .pipe(typescript(tsProject))
-        .pipe(sourcemaps.write())
-        //.pipe(jsuglify())
         .pipe(gulp.dest(appDir));
 });
 
